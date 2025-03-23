@@ -1,6 +1,13 @@
 name: Build and deploy
 
 on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: A git ref on the Streamlink git repo
+        default: master
+        required: true
+        type: string
   push: {}
   pull_request: {}
 
